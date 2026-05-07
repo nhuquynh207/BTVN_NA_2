@@ -270,3 +270,17 @@ where total_money = (
     select max(total_money)
     from orders
 );
+
+-- q13:Tìm category có tổng doanh thu cao nhất.
+
+
+-- q14:Tìm top 3 sản phẩm bán chạy nhất
+
+
+-- q15:Tìm users chưa từng đặt bất kỳ đơn hàng nào
+select *
+from users
+where user_id not in (
+    select user_id
+    from orders
+);
